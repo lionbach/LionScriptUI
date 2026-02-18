@@ -95,7 +95,7 @@ EOF
 # Validamos el json y salimos si da error
 "$JQ" -e . <<< "$JSON_INPUT" > /dev/null || exit 1
 
-RESULT=$(python main.py "$JSON_INPUT")
+RESULT=$(python ../main.py "$JSON_INPUT")
 
 if [ $? -ne 0 ]; then
     echo "Error ejecutando el formulario."
